@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Nav bar / 01
-    </title>
+    <title>Nav bar / 01</title>
     <link rel="stylesheet" href="nav01.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <header>
         <img class="logo" src="LOGO.png" alt="Logo Image">
-       
         <nav>
             <ul class="nav_links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Education</a></li>
                 <li><a href="#">Portfolio</a></li>
+                <li><a class="cta" href="#"><button>Contact Me</button></a></li>
             </ul>
         </nav>
-        <a class="cta" href="#"><button>Contact Me</button></a>
+        <div class="menu-toggle">
+            <img src="menu-icon.png" alt="Menu Icon">
+        </div>
     </header>
 
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav_links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
